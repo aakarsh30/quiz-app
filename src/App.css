@@ -5,3 +5,12 @@ body,
   height: 100%;
   background-color: seagreen;
 }
+.outer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.playbutton {
+  align-self: center;
+  width: 20%;
+}

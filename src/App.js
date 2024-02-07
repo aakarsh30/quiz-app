@@ -3,11 +3,21 @@ import "./App.css";
 import Header from "./components/header";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import QuizBox from "./components/quiz-box";
+import { useState } from "react";
+import { Button } from "react-bootstrap";
 function App() {
+  const [startquiz, setstartquiz] = useState(false);
+
   return (
-    <div>
+    <div className="outer">
       <Header />
-      <QuizBox />
+      {startquiz === false ? (
+        <Button className="playbutton" onClick={() => setstartquiz(true)}>
+          Play Quiz
+        </Button>
+      ) : (
+        <QuizBox />
+      )}
     </div>
   );
 }
